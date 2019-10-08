@@ -4,3 +4,13 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+button.link {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}

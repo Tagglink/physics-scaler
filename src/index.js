@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 const ipc = require('electron').ipcMain;
 const physics = require('../build/Release/physicsaddon.node');
 
@@ -36,6 +36,10 @@ const createWindow = () => {
   ipc.on('calculate', function(event, data){
     let response = CalculatePhysics(data);
     event.sender.send('calculation_finished', response);
+  });
+
+  ipc.on('go_to_source', function(){
+    shell.openExternal("https://github.com/Tagglink/physics-scaler");
   });
 };
 
