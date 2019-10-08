@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PhysicsScaler</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>💖 Scale Physics! 💖</h1>
+    <p>
+      Write the numbers you want to scale the respective fields with below. <br/> 
+      <br/>
+      For example: if you want time to go 60 times as fast in your simulation, <br/>
+      enter '60' into the 'Time scale' field, press the 'Invert' button next to it, <br/>
+      press the 'Calculate!' button, and insert the values that pop up into your simulation. <br/>
+      <br/>
+      All of the base values are based on real-life values in the specified units below. <br/>
+      Entering 1·10^0 in all fields below should produce the real-life numbers.
+    </p>
+    <span>Time scale (seconds): </span> <input id="time_scale"/> <span> ·10^</span> <input id="time_exponent" style="width: 20px;"/> <button id="invert_time">Invert</button> <br/>
+    <span>Mass scale (kilograms): </span> <input id="mass_scale"/> <span> ·10^</span> <input id="mass_exponent" style="width: 20px;"/> <button id="invert_mass">Invert</button> <br/>
+    <span>Length scale (meters): </span> <input id="length_scale"/> <span> ·10^</span> <input id="length_exponent" style="width: 20px;"/> <button id="invert_length">Invert</button> <br/>
+    <button id="calculate">Calculate!</button>
+    <ul id="state">
+      <li>
+        <span>Gravitational constant: </span>
+        <span id="gravitational_constant"></span>
+      </li>
+      <li>
+        <span>Mass of the Earth: </span>
+        <span id="earth_mass"></span>
+      </li>
+      <li>
+        <span>Mass of the Moon: </span>
+        <span id="moon_mass"></span>
+      </li>
+      <li>
+        <span>Distance to the Moon: </span>
+        <span id="earth_moon_distance"></span>
+      </li>
+      <li>
+        <span>Radius of the Earth: </span>
+        <span id="earth_radius"></span>
+      </li>
+      <li>
+        <span>Radius of the Moon: </span>
+        <span id="moon_radius"></span>
+      </li>
+      <li>
+        <span>Speed of the Moon: </span>
+        <span id="moon_speed"></span>
+      </li>
+    </ul>
+    <script src="physics.js"></script>
+  </body>
+</html>

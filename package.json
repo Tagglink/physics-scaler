@@ -1,0 +1,64 @@
+{
+  "name": "physics-scaler",
+  "productName": "physics-scaler",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "gypfile": true,
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Tomas Granlund",
+    "email": "tagglink42@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "physics_scaler"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "node-addon-api": "^1.7.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.45",
+    "@electron-forge/maker-deb": "^6.0.0-beta.45",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.45",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.45",
+    "@electron-forge/maker-zip": "^6.0.0-beta.45",
+    "browserify": "^16.5.0",
+    "electron": "6.0.11",
+    "node-gyp": "^6.0.0"
+  }
+}
