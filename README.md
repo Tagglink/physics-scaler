@@ -11,3 +11,5 @@ and figured I'd share it with my other students.
 So what better way than to use Electron as the front-end? None! Except it took a while to get it working!
 
 I would have loved to put this up on a website instead, but it needs the C++ to handle the really big numbers...
+
+![](https://puu.sh/EqkXK/0dca4a275e.gif)
